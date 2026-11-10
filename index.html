@@ -1,534 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Kaushal</title>
-    <link rel="icon" type="image/jpeg" href="images/insta-tiktok.jpg">
-
-    <meta name="description"
-        content="Kaushal — Gaming, relatable reels and digital content creator.">
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaushal</title>
+<link rel="icon" type="image/png" href="images/instagram.png">
+<meta name="description" content="Kaushal — videos, reels, editing and creative digital content.">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- LOADING -->
+<div class="cursor-glow"></div>
+<div class="scroll-progress"></div>
 
-    <div id="loader">
-        <div class="loader-logo">K.</div>
+<header class="navbar">
+    <a href="#home" class="logo">KAUSHAL<span>.</span></a>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#content">Content</a>
+        <a href="#stats">Stats</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="nav-button">Let's Connect</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+</header>
+
+<main>
+<section class="hero" id="home">
+    <div class="hero-bg-orb orb-one"></div>
+    <div class="hero-bg-orb orb-two"></div>
+
+    <div class="hero-content reveal">
+        <div class="status-pill"><span></span> ONLINE • CREATING</div>
+        <p class="eyebrow">VIDEOS • REELS • CREATIVE</p>
+        <h1>MAKE IT<br><span>UNFORGETTABLE.</span></h1>
+        <p class="hero-text">Videos, reels, edits and creative digital projects — built to look good, feel different and keep people watching.</p>
+        <div class="hero-buttons">
+            <a href="#content" class="primary-btn magnetic">Explore</a>
+            <a href="#contact" class="outline-btn magnetic">Work With Me</a>
+        </div>
+        <div class="hero-socials">
+            <a href="https://www.instagram.com/kaushal_afx" target="_blank">Instagram</a>
+            <a href="https://youtube.com/@kaushal_afx" target="_blank">YouTube</a>
+            <a href="https://www.facebook.com/kaushal.afx" target="_blank">Facebook</a>
+            <a href="https://www.tiktok.com/@kaushal_afx" target="_blank">TikTok</a>
+        </div>
     </div>
 
-
-    <!-- NAVBAR -->
-
-    <header class="navbar">
-
-        <a href="#home" class="logo">
-            KAUSHAL<span>.</span>
-        </a>
-
-        <nav id="nav">
-
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#content">Content</a>
-            <a href="#socials">Socials</a>
-            <a href="#contact">Contact</a>
-
-        </nav>
-
-        <a href="#socials" class="top-button">
-            Follow Me
-        </a>
-
-        <button class="menu-button" id="menuButton">
-            <span></span>
-            <span></span>
-        </button>
-
-    </header>
-
-
-    <!-- MAIN -->
-
-    <main>
-
-
-        <!-- HERO -->
-
-        <section class="hero" id="home">
-
-            <div class="glow glow-one"></div>
-            <div class="glow glow-two"></div>
-
-            <div class="hero-left">
-
-                <div class="mini-title">
-                    GAMING • REELS • CONTENT
+    <div class="hero-visual reveal">
+        <div class="hero-card">
+            <div class="hero-card-top"><span>KAUSHAL</span><span>2026</span></div>
+            <div class="hero-logo-wrap">
+                <div class="hero-ring"></div>
+                <div class="hero-logo">
+                    <img src="images/youtube.png" alt="Kaushal">
                 </div>
-
-                <h1>
-                    CREATE.<br>
-                    PLAY.<br>
-                    <span>REPEAT.</span>
-                </h1>
-
-                <p class="hero-text">
-                    I'm Kaushal — a gaming and content creator
-                    sharing gaming moments, relatable reels
-                    and content for people who just get it.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="#content" class="primary-button">
-                        Explore Content
-                    </a>
-
-                    <a href="#socials" class="secondary-button">
-                        Follow Me ↗
-                    </a>
-
-                </div>
-
-                <div class="hero-bottom">
-
-                    <span>01</span>
-
-                    <div class="small-line"></div>
-
-                    <span>Creator Portfolio</span>
-
-                </div>
-
             </div>
+            <div class="hero-card-bottom"><span>CREATE</span><span>REPEAT</span></div>
+        </div>
+        <div class="floating-chip chip-one">REELS ↗</div>
+        <div class="floating-chip chip-two">VIDEOS ▶</div>
+    </div>
+</section>
 
+<section class="marquee">
+    <div class="marquee-track">
+        <span>VIDEOS</span><i>✦</i><span>REELS</span><i>✦</i><span>EDITING</span><i>✦</i><span>DESIGN</span><i>✦</i>
+        <span>VIDEOS</span><i>✦</i><span>REELS</span><i>✦</i><span>EDITING</span><i>✦</i><span>DESIGN</span><i>✦</i>
+    </div>
+</section>
 
-            <!-- HERO IMAGE -->
+<section class="section" id="content">
+    <div class="section-heading reveal">
+        <div>
+            <p class="eyebrow">WHAT I DO</p>
+            <h2>CREATE.<br><span>POST. REPEAT.</span></h2>
+        </div>
+        <p>Different formats, one goal: making content people actually want to watch.</p>
+    </div>
 
-            <div class="hero-image-box">
+    <div class="content-grid">
+        <article class="content-card large reveal tilt">
+            <div class="card-top"><span>01</span><b>VIDEOS</b></div>
+            <div class="card-icon">▶</div>
+            <h3>Videos</h3>
+            <p>Long-form and short-form videos built around ideas, entertainment and storytelling.</p>
+            <a href="https://youtube.com/@kaushal_afx" target="_blank">WATCH →</a>
+        </article>
 
-                <div class="hero-image-glow"></div>
+        <article class="content-card reveal tilt">
+            <div class="card-top"><span>02</span><b>REELS</b></div>
+            <div class="card-icon">✦</div>
+            <h3>Reels</h3>
+            <p>Fast, creative and scroll-stopping short-form content.</p>
+            <a href="https://www.instagram.com/kaushal_afx" target="_blank">VIEW REELS →</a>
+        </article>
 
-                <img
-                    src="images/youtube-telegram.jpg"
-                    alt="Kaushal Gaming">
+        <article class="content-card reveal tilt">
+            <div class="card-top"><span>03</span><b>CREATIVE</b></div>
+            <div class="card-icon">✂</div>
+            <h3>Editing & Design</h3>
+            <p>Edits, thumbnails, graphics and digital creative projects.</p>
+            <a href="#work">SEE WORK →</a>
+        </article>
+    </div>
+</section>
 
-                <div class="hero-image-text">
-                    KAUSHAL<br>
-                    <span>GAMING</span>
-                </div>
+<section class="live-section" id="stats">
+    <div class="section-heading reveal">
+        <div>
+            <p class="eyebrow">COMMUNITY STATS</p>
+            <h2>THE COMMUNITY<br><span>GROWS.</span></h2>
+        </div>
+        <p>Community & audience</p>
+    </div>
 
+    <div class="live-grid">
+        <div class="live-card youtube-live reveal">
+            <div class="live-card-head">
+                <span class="live-dot"></span>
+                <span>YOUTUBE • LIVE</span>
             </div>
-
-        </section>
-
-
-        <!-- ABOUT + CONTENT -->
-
-        <section class="about-content" id="about">
-
-
-            <div class="about-box">
-
-                <div class="section-label">
-                    ABOUT ME
-                </div>
-
-                <h2>
-                    Just a guy<br>
-                    <span>creating.</span>
-                </h2>
-
-                <p>
-                    Hey, I'm Kaushal. I create gaming content,
-                    relatable reels and entertaining posts across
-                    different social platforms.
-                </p>
-
-                <a href="#contact" class="simple-link">
-                    Let's connect →
-                </a>
-
-            </div>
-
-
-            <div class="content-box" id="content">
-
-                <div class="section-label">
-                    WHAT I CREATE
-                </div>
-
-                <h2>
-                    My <span>Content.</span>
-                </h2>
-
-                <div class="content-mini-grid">
-
-
-                    <div class="mini-card">
-
-                        <div class="mini-icon">
-                            🎮
-                        </div>
-
-                        <h3>Gaming</h3>
-
-                        <p>
-                            Gameplay, clips and funny gaming moments.
-                        </p>
-
-                    </div>
-
-
-                    <div class="mini-card">
-
-                        <div class="mini-icon">
-                            ▶
-                        </div>
-
-                        <h3>Relatable Reels</h3>
-
-                        <p>
-                            Reels and memes people can relate to.
-                        </p>
-
-                    </div>
-
-
-                    <div class="mini-card">
-
-                        <div class="mini-icon">
-                            👥
-                        </div>
-
-                        <h3>Community</h3>
-
-                        <p>
-                            Connecting with people across platforms.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- SOCIALS -->
-
-        <section class="social-section" id="socials">
-
-            <div class="social-heading">
-
-                <div>
-                    <div class="section-label">
-                        FIND ME ON
-                    </div>
-
-                    <h2>
-                        My <span>Socials.</span>
-                    </h2>
-                </div>
-
-                <p>
-                    Follow me on your favorite platform
-                    and stay connected.
-                </p>
-
-            </div>
-
-
-            <div class="social-grid">
-
-
-                <!-- INSTAGRAM -->
-
-                <a
-                    href="https://www.instagram.com/kaushal_afx"
-                    target="_blank"
-                    class="social-card">
-
-                    <div class="social-img">
-                        <img
-                            src="images/insta-tiktok.jpg"
-                            alt="Kaushal Instagram">
-                    </div>
-
-                    <div class="social-details">
-
-                        <div>
-
-                            <small>01</small>
-
-                            <h3>Instagram</h3>
-
-                            <p>@kaushal_afx</p>
-
-                        </div>
-
-                        <div class="arrow">
-                            ↗
-                        </div>
-
-                    </div>
-
-                </a>
-
-
-                <!-- TIKTOK -->
-
-                <a
-                    href="https://www.tiktok.com/@kaushal_afx"
-                    target="_blank"
-                    class="social-card">
-
-                    <div class="social-img">
-                        <img
-                            src="images/insta-tiktok.jpg"
-                            alt="Kaushal TikTok">
-                    </div>
-
-                    <div class="social-details">
-
-                        <div>
-
-                            <small>02</small>
-
-                            <h3>TikTok</h3>
-
-                            <p>@kaushal_afx</p>
-
-                        </div>
-
-                        <div class="arrow">
-                            ↗
-                        </div>
-
-                    </div>
-
-                </a>
-
-
-                <!-- YOUTUBE -->
-
-                <a
-                    href="https://youtube.com/@kaushal_afx"
-                    target="_blank"
-                    class="social-card">
-
-                    <div class="social-img">
-                        <img
-                            src="images/youtube-telegram.jpg"
-                            alt="Kaushal YouTube">
-                    </div>
-
-                    <div class="social-details">
-
-                        <div>
-
-                            <small>03</small>
-
-                            <h3>YouTube</h3>
-
-                            <p>@kaushal_afx</p>
-
-                        </div>
-
-                        <div class="arrow">
-                            ↗
-                        </div>
-
-                    </div>
-
-                </a>
-
-
-                <!-- TELEGRAM -->
-
-                <a
-                    href="https://t.me/Kaushal_afx"
-                    target="_blank"
-                    class="social-card">
-
-                    <div class="social-img">
-                        <img
-                            src="images/youtube-telegram.jpg"
-                            alt="Kaushal Telegram">
-                    </div>
-
-                    <div class="social-details">
-
-                        <div>
-
-                            <small>04</small>
-
-                            <h3>Telegram</h3>
-
-                            <p>@kaushal_afx44</p>
-
-                        </div>
-
-                        <div class="arrow">
-                            ↗
-                        </div>
-
-                    </div>
-
-                </a>
-
-
-                <!-- FACEBOOK -->
-
-                <a
-                    href="https://www.facebook.com/kaushal.afx"
-                    target="_blank"
-                    class="social-card facebook-card">
-
-                    <div class="social-img">
-                        <img
-                            src="images/facebook.jpg"
-                            alt="Kaushal Facebook">
-                    </div>
-
-                    <div class="social-details">
-
-                        <div>
-
-                            <small>05</small>
-
-                            <h3>Facebook</h3>
-
-                            <p>kaushal.afx</p>
-
-                        </div>
-
-                        <div class="arrow">
-                            ↗
-                        </div>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONTACT -->
-
-        <section class="contact" id="contact">
-
-            <div class="contact-glow"></div>
-
-            <div class="contact-inner">
-
-                <div class="section-label">
-                    CONTACT
-                </div>
-
-                <h2>
-                    Have an<br>
-                    <span>idea?</span>
-                </h2>
-
-                <p>
-                    For collaborations, promotions or business
-                    enquiries, feel free to reach out.
-                </p>
-
-                <div class="contact-buttons">
-
-                    <a
-                        href="https://www.instagram.com/kaushal_afx"
-                        target="_blank"
-                        class="primary-button">
-
-                        Contact on Instagram ↗
-
-                    </a>
-
-                    <a
-                        href="https://t.me/Kaushal_afx"
-                        target="_blank"
-                        class="secondary-button">
-
-                        Telegram ↗
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-    </main>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <div class="footer-main">
-
-            <div class="footer-logo">
-                KAUSHAL<span>.</span>
-            </div>
-
-            <p>
-                Gaming. Reels. Real moments.
-            </p>
-
+            <strong id="youtubeSubs" data-count="0">—</strong>
+            <small>Subscribers</small>
+            <p id="youtubeStatus">Public subscriber count</p>
         </div>
 
-        <div class="footer-bottom">
-
-            <span>
-                © 2026 KAUSHAL.
-            </span>
-
-            <div>
-
-                <a href="https://www.instagram.com/kaushal_afx"
-                    target="_blank">
-                    Instagram
-                </a>
-
-                <a href="https://youtube.com/@kaushal_afx"
-                    target="_blank">
-                    YouTube
-                </a>
-
-                <a href="https://www.tiktok.com/@kaushal_afx"
-                    target="_blank">
-                    TikTok
-                </a>
-
-            </div>
-
+        <div class="live-card reveal">
+            <div class="live-card-head"><span>INSTAGRAM</span><span>↗</span></div>
+            <strong id="instagramFollowers">—</strong>
+            <small>Followers</small>
+            <p>Instagram audience</p>
         </div>
 
-    </footer>
+        <div class="live-card reveal">
+            <div class="live-card-head"><span>TIKTOK</span><span>↗</span></div>
+            <strong id="tiktokFollowers">—</strong>
+            <small>Followers</small>
+            <p>TikTok audience</p>
+        </div>
+
+        <div class="live-card reveal">
+            <div class="live-card-head"><span>FACEBOOK</span><span>↗</span></div>
+            <strong id="facebookFollowers">—</strong>
+            <small>Followers</small>
+            <p>Facebook audience</p>
+        </div>
+    </div>
+
+</section>
+
+<section class="section" id="work">
+    <div class="section-heading reveal">
+        <div>
+            <p class="eyebrow">SELECTED WORK</p>
+            <h2>MY <span>WORK.</span></h2>
+        </div>
+        <p>Use this section later for your actual videos, reels, thumbnails, edits and projects.</p>
+    </div>
+
+    <div class="portfolio-grid">
+        <a class="portfolio-card portfolio-one reveal tilt" href="https://youtube.com/@kaushal_afx" target="_blank">
+            <div><span>01 / VIDEOS</span><h3>Videos</h3><small>Open YouTube →</small></div>
+        </a>
+        <a class="portfolio-card portfolio-two reveal tilt" href="https://www.instagram.com/kaushal_afx" target="_blank">
+            <div><span>02 / REELS</span><h3>Reels</h3><small>Open Instagram →</small></div>
+        </a>
+        <div class="portfolio-card portfolio-three reveal tilt">
+            <div><span>03 / DESIGN</span><h3>Thumbnails & Edits</h3><small>Add your projects here</small></div>
+        </div>
+        <div class="portfolio-card portfolio-four reveal tilt">
+            <div><span>04 / FUTURE</span><h3>More Projects</h3><small>Coming soon</small></div>
+        </div>
+    </div>
+</section>
 
 
-    <script src="script.js"></script>
+<section class="brand-assets section" id="brand-assets">
+    <div class="section-heading reveal">
+        <div>
+            <p class="eyebrow">BRAND ASSETS</p>
+            <h2>KAUSHAL<br><span>VISUAL IDENTITY.</span></h2>
+        </div>
+        <p>Official profile visuals and channel artwork used across the creator brand.</p>
+    </div>
 
+    <div class="brand-grid">
+        <a class="brand-card reveal tilt" href="https://www.instagram.com/kaushal_afx" target="_blank" rel="noopener">
+            <div class="brand-label"><span>01 / SOCIAL</span><b>INSTAGRAM</b></div>
+            <img src="images/instagram.png" alt="Kaushal Instagram logo">
+            <strong>@kaushal_afx</strong>
+            <small>160+ followers ↗</small>
+        </a>
+
+        <a class="brand-card reveal tilt" href="https://www.tiktok.com/@kaushal_afx" target="_blank" rel="noopener">
+            <div class="brand-label"><span>02 / SOCIAL</span><b>TIKTOK</b></div>
+            <img src="images/tiktok.png" alt="Kaushal TikTok logo">
+            <strong>@kaushal_afx</strong>
+            <small>400+ followers ↗</small>
+        </a>
+
+        <a class="brand-card brand-card-wide reveal" href="https://youtube.com/@kaushal_afx" target="_blank" rel="noopener">
+            <div class="brand-label"><span>03 / CHANNEL</span><b>YOUTUBE BANNER</b></div>
+            <img class="banner-preview" src="images/youtube-banner.png" alt="Kaushal YouTube banner">
+            <div class="banner-meta"><strong>@kaushal_afx</strong><small>440+ subscribers ↗</small></div>
+        </a>
+    </div>
+</section>
+
+<section class="about-section" id="about">
+    <div class="about-image reveal">
+        <div class="image-shine"></div>
+        <img src="images/instagram.png" alt="Kaushal">
+    </div>
+    <div class="about-content reveal">
+        <p class="eyebrow">ABOUT</p>
+        <h2>THIS IS <span>KAUSHAL.</span></h2>
+        <p>I create videos, reels, edits and digital projects while experimenting with new ideas and creative tools.</p>
+        <p>This website is my home on the internet — a place for my content, work, links and future projects.</p>
+        <div class="about-tags">
+            <span>Videos</span><span>Reels</span><span>Editing</span><span>Design</span><span>Creative</span>
+        </div>
+    </div>
+</section>
+
+<section class="ideas-section">
+    <div class="section-heading reveal">
+        <div>
+            <p class="eyebrow">FUTURE UPGRADES</p>
+            <h2>MORE THAN<br><span>A PROFILE.</span></h2>
+        </div>
+        <p>These are the features I recommend adding as your creator brand grows.</p>
+    </div>
+
+    <div class="ideas-grid">
+        <div class="idea reveal"><b>01</b><h3>Latest Content</h3><p>Automatically show your newest YouTube videos and selected reels.</p></div>
+        <div class="idea reveal"><b>02</b><h3>Video Player</h3><p>Featured video section directly on your homepage.</p></div>
+        <div class="idea reveal"><b>03</b><h3>Real-time Stats</h3><p>Subscriber and follower counters with supported APIs.</p></div>
+        <div class="idea reveal"><b>04</b><h3>Gallery</h3><p>A proper grid for thumbnails, edits, posters and designs.</p></div>
+        <div class="idea reveal"><b>05</b><h3>Collab Page</h3><p>A dedicated page for brands, creators and collaboration requests.</p></div>
+        <div class="idea reveal"><b>06</b><h3>Custom Domain</h3><p>A future custom domain and professional email address.</p></div>
+    </div>
+</section>
+
+<section class="collab-section">
+    <div class="collab-content reveal">
+        <p class="eyebrow">COLLABORATE</p>
+        <h2>HAVE AN IDEA?<br><span>LET'S CREATE IT.</span></h2>
+        <p>For collaborations, projects, content ideas or creative work.</p>
+        <a href="#contact" class="primary-btn magnetic">LET'S TALK →</a>
+    </div>
+</section>
+
+<section class="contact-section" id="contact">
+    <div class="contact-heading reveal">
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2>LET'S MAKE<br><span>SOMETHING.</span></h2>
+        <p>For collaborations, projects or just saying hello.</p>
+    </div>
+    <div class="contact-links reveal">
+        <!-- Replace with your real public email -->
+        <a href="mailto:kaushaledits@gmail.com" class="contact-link">
+            <span>EMAIL</span><strong>kaushaledits@gmail.com</strong>
+        </a>
+        <a href="https://www.instagram.com/kaushal_afx" target="_blank" class="contact-link">
+            <span>INSTAGRAM</span><strong>@kaushal_afx</strong>
+        </a>
+        <a href="https://youtube.com/@kaushal_afx" target="_blank" class="contact-link">
+            <span>YOUTUBE</span><strong>@kaushal_afx</strong>
+        </a>
+    </div>
+</section>
+</main>
+
+<footer>
+    <div class="footer-logo">KAUSHAL<span>.</span></div>
+    <p>Videos • Reels • Creative</p>
+    <div class="footer-socials">
+        <a href="https://www.instagram.com/kaushal_afx" target="_blank">Instagram</a>
+        <a href="https://youtube.com/@kaushal_afx" target="_blank">YouTube</a>
+        <a href="https://www.facebook.com/kaushal.afx" target="_blank">Facebook</a>
+        <a href="https://www.tiktok.com/@kaushal_afx" target="_blank">TikTok</a>
+    </div>
+    <small>© 2026 Kaushal. All rights reserved.</small>
+</footer>
+
+<button id="topBtn" class="top-btn">↑</button>
+<script src="script.js"></script>
 </body>
-
 </html>

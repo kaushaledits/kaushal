@@ -1,199 +1,124 @@
-/* =========================================
-   KAUSHAL WEBSITE
-========================================= */
+// Kaushal — website interactions and public audience counts.
 
+const STATS = {
+    youtube: "440+",
+    instagram: "160+",
+    tiktok: "400+",
+    facebook: "20+"
+};
 
-/* =========================================
-   LOADER
-========================================= */
+function loadStats() {
+    const values = {
+        youtubeSubs: STATS.youtube,
+        instagramFollowers: STATS.instagram,
+        tiktokFollowers: STATS.tiktok,
+        facebookFollowers: STATS.facebook
+    };
 
-window.addEventListener("load", function () {
-
-    const loader = document.getElementById("loader");
-
-    setTimeout(function () {
-
-        loader.classList.add("hide");
-
-    }, 700);
-
-});
-
-
-/* =========================================
-   MOBILE MENU
-========================================= */
-
-const menuButton =
-    document.getElementById("menuButton");
-
-const nav =
-    document.getElementById("nav");
-
-
-menuButton.addEventListener("click", function () {
-
-    nav.classList.toggle("active");
-
-});
-
-
-/* Close menu after clicking */
-
-const navLinks =
-    document.querySelectorAll("#nav a");
-
-
-navLinks.forEach(function (link) {
-
-    link.addEventListener("click", function () {
-
-        nav.classList.remove("active");
-
+    Object.entries(values).forEach(([id, value]) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = value;
     });
+}
 
-});
+document.addEventListener("DOMContentLoaded", () => {
+    loadStats();
 
-
-/* =========================================
-   SMOOTH SCROLL
-========================================= */
-
-document.querySelectorAll('a[href^="#"]')
-    .forEach(function (link) {
-
-        link.addEventListener("click", function (event) {
-
-            const target =
-                document.querySelector(
-                    this.getAttribute("href")
-                );
-
-            if (target) {
-
-                event.preventDefault();
-
-                target.scrollIntoView({
-                    behavior: "smooth"
-                });
-
+    // Scroll reveal
+    const revealItems = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                observer.unobserve(entry.target);
             }
-
         });
+    }, { threshold: 0.12 });
+    revealItems.forEach(el => observer.observe(el));
 
+    // Mobile navigation
+    const menuBtn = document.getElementById("menuBtn");
+    const nav = document.querySelector(".navbar nav");
+    if (menuBtn && nav) {
+        menuBtn.addEventListener("click", () => {
+            nav.classList.toggle("open");
+            menuBtn.textContent = nav.classList.contains("open") ? "×" : "☰";
+        });
+        nav.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                nav.classList.remove("open");
+                menuBtn.textContent = "☰";
+            });
+        });
+    }
+
+    // Scroll progress
+    const progress = document.querySelector(".scroll-progress");
+    const updateProgress = () => {
+        if (!progress) return;
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.width = `${max > 0 ? (window.scrollY / max) * 100 : 0}%`;
+    };
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    updateProgress();
+
+    // Cursor glow on desktop
+    const glow = document.querySelector(".cursor-glow");
+    if (glow && window.matchMedia("(pointer:fine)").matches) {
+        window.addEventListener("pointermove", e => {
+            glow.style.left = `${e.clientX}px`;
+            glow.style.top = `${e.clientY}px`;
+        }, { passive: true });
+    }
+
+    // Magnetic buttons
+    document.querySelectorAll(".magnetic").forEach(el => {
+        el.addEventListener("pointermove", e => {
+            const r = el.getBoundingClientRect();
+            const x = (e.clientX - r.left - r.width / 2) * 0.10;
+            const y = (e.clientY - r.top - r.height / 2) * 0.10;
+            el.style.transform = `translate(${x}px, ${y}px)`;
+        });
+        el.addEventListener("pointerleave", () => {
+            el.style.transform = "";
+        });
     });
 
-
-/* =========================================
-   SOCIAL CARD MOUSE EFFECT
-========================================= */
-
-const cards =
-    document.querySelectorAll(".social-card");
-
-
-cards.forEach(function (card) {
-
-    card.addEventListener(
-        "mousemove",
-        function (event) {
-
-            const rect =
-                card.getBoundingClientRect();
-
-            const x =
-                event.clientX - rect.left;
-
-            const y =
-                event.clientY - rect.top;
-
-            const rotateX =
-                ((y / rect.height) - .5) * -2;
-
-            const rotateY =
-                ((x / rect.width) - .5) * 2;
-
-            card.style.transform =
-                `perspective(600px)
-                 rotateX(${rotateX}deg)
-                 rotateY(${rotateY}deg)
-                 translateY(-5px)`;
-
-        }
-    );
-
-
-    card.addEventListener(
-        "mouseleave",
-        function () {
-
+    // Subtle 3D tilt
+    document.querySelectorAll(".tilt").forEach(card => {
+        card.addEventListener("pointermove", e => {
+            if (!window.matchMedia("(pointer:fine)").matches) return;
+            const r = card.getBoundingClientRect();
+            const x = (e.clientX - r.left) / r.width - .5;
+            const y = (e.clientY - r.top) / r.height - .5;
+            card.style.transform = `perspective(900px) rotateX(${(-y * 5).toFixed(2)}deg) rotateY(${(x * 5).toFixed(2)}deg) translateY(-3px)`;
+        });
+        card.addEventListener("pointerleave", () => {
             card.style.transform = "";
+        });
+    });
 
-        }
-    );
+    // Back to top
+    const topBtn = document.getElementById("topBtn");
+    if (topBtn) {
+        const toggleTop = () => topBtn.classList.toggle("show", window.scrollY > 600);
+        window.addEventListener("scroll", toggleTop, { passive: true });
+        toggleTop();
+        topBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    }
 
+    // Smooth same-page links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener("click", e => {
+            const target = document.querySelector(link.getAttribute("href"));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        });
+    });
 });
 
-
-/* =========================================
-   PARALLAX HERO
-========================================= */
-
-const heroImage =
-    document.querySelector(".hero-image-box");
-
-
-window.addEventListener("mousemove", function (event) {
-
-    if (!heroImage) return;
-
-    const x =
-        (event.clientX / window.innerWidth - .5);
-
-    const y =
-        (event.clientY / window.innerHeight - .5);
-
-    heroImage.style.transform =
-        `translate(${x * 8}px, ${y * 8}px)`;
-
-});
-
-
-/* =========================================
-   SCROLL FADE
-========================================= */
-
-const animatedElements =
-    document.querySelectorAll(
-        ".about-box, .content-box, .social-card, .contact-inner"
-    );
-
-
-const observer =
-    new IntersectionObserver(
-        function (entries) {
-
-            entries.forEach(function (entry) {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.style.opacity = "1";
-                    entry.target.style.transform =
-                        "translateY(0)";
-
-                }
-
-            });
-
-        },
-        {
-            threshold: .1
-        }
-    );
-
-
-animatedElements.forEach(function (element) {
-
-    observer.observe(element);
-
-});
+// Current year
+const footerYear = document.querySelector("footer small");
+if (footerYear) footerYear.textContent = `© ${new Date().getFullYear()} Kaushal. All rights reserved.`;
